@@ -22,7 +22,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 //@EnableTransactionManagement
 //@EnableWebMvc
 public class RootAppConfig {
-    
+    // ddadsfdsafdsf
 	@Bean
 	public DataSource dataSource() throws IllegalArgumentException, NamingException {
 		JndiObjectFactoryBean jndiBean = new JndiObjectFactoryBean();
