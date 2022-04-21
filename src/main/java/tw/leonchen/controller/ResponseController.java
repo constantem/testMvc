@@ -41,17 +41,17 @@ public class ResponseController {
 		headers.setContentType(MediaType.TEXT_PLAIN);
 		return new ResponseEntity<String>("Custom Header Information", headers, HttpStatus.OK);
 	}
-	
-	@GetMapping(path = "/responseimage.controller", produces = "text/plain;charset=UTF-8")
-	public void processResponseImageAsByteArrayAction(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		InputStream is = request.getServletContext().getResourceAsStream("/WEB-INF/resources/images/images01.jpg");
-		IOUtils.copy(is, response.getOutputStream());
-	}
-	
-	@GetMapping(path = "/responseimagebytearray.controller", produces = "text/plain;charset=UTF-8")
-	@ResponseBody
-	public byte[] processResponseImageAsByteArrayAction2(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		InputStream is = request.getServletContext().getResourceAsStream("/WEB-INF/resources/images/images01.jpg");
-		return IOUtils.toByteArray(is);
-	}
+//	
+//	@GetMapping(path = "/responseimage.controller", produces = "text/plain;charset=UTF-8")
+//	public void processResponseImageAsByteArrayAction(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//		InputStream is = request.getServletContext().getResourceAsStream("/WEB-INF/resources/images/images01.jpg");
+//		IOUtils.copy(is, response.getOutputStream());
+//	}
+//	
+//	@GetMapping(path = "/responseimagebytearray.controller", produces = "text/plain;charset=UTF-8")
+//	@ResponseBody
+//	public byte[] processResponseImageAsByteArrayAction2(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//		InputStream is = request.getServletContext().getResourceAsStream("/WEB-INF/resources/images/images01.jpg");
+//		return IOUtils.toByteArray(is);
+//	}
 }
